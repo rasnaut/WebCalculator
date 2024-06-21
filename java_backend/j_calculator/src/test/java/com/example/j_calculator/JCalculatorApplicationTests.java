@@ -18,4 +18,19 @@ class JCalculatorApplicationTests {
         String result = controller.add(2, 3);
         assertThat(result).isEqualTo("5");
     }
+
+    @Test
+    void testAdd() {
+        CalculatorController controller = new CalculatorController();
+        String result = controller.add(2, 3);
+        assertThat(result).isEqualTo("5");
+    }
+
+    @Test
+    void testPercentage() {
+        CalculatorController controller = new CalculatorController();
+        String result2 = controller.percentage(200, 25);
+        assertThat(result2).isEqualTo("50.0");
+
+    }
 }
