@@ -23,5 +23,9 @@ public class CalculatorController {
     public String divide(@ModelAttribute("operationModel") OperationModel operationModel, Model model ){
         model.addAttribute("result", calculateSimple.divide(operationModel));
         return "calculator";
+    @GetMapping("/multiply")
+    public String multiply(@RequestParam int a, @RequestParam int b) {
+        return String.valueOf(a * b);
+
     }
 }
