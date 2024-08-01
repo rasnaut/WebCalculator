@@ -25,4 +25,9 @@ public class CalculatorController {
     public String substruct(@RequestParam int a, @RequestParam int b) {
         return String.valueOf(a - b);
     }
+
+    @GetMapping("/cube")
+    public String cube (@RequestParam int a) { return String.valueOf(a * a * a);
+    }
+
 }
