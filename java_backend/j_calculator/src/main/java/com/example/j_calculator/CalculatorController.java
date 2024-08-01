@@ -25,6 +25,7 @@ public class CalculatorController {
     public String substruct(@RequestParam int a, @RequestParam int b) {
         return String.valueOf(a - b);
     }
+ 47-backend-root-calculation1
     @GetMapping("/root")
     public String root(@RequestParam int a) {
         if (a < 0) {
