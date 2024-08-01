@@ -25,6 +25,11 @@ public class CalculatorController {
     public String substruct(@RequestParam int a, @RequestParam int b) {
         return String.valueOf(a - b);
     }
-    @GetMapping("/div_by_x")
-    public String div_one_by_x( @RequestParam int x) {return String.valueOf(1 / x); }
+    @GetMapping("/divideByX")
+    public String divideOneByX(@RequestParam int x) {
+        if (x == 0) {
+            return "Error: Division by zero is not allowed.";
+        }
+        return String.valueOf(1.0 / x);
+    }
 }
