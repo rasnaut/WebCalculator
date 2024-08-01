@@ -25,4 +25,12 @@ public class CalculatorController {
     public String substruct(@RequestParam int a, @RequestParam int b) {
         return String.valueOf(a - b);
     }
+    @GetMapping("/root")
+    public String root(@RequestParam double a) {
+        if (a < 0) {
+            return "Square root of negative numbers is not allowed.";
+        }
+        return String.valueOf(Math.sqrt(a));
+    }
+
 }
