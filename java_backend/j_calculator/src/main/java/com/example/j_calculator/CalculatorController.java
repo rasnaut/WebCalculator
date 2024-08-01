@@ -25,4 +25,10 @@ public class CalculatorController {
     public String substruct(@RequestParam int a, @RequestParam int b) {
         return String.valueOf(a - b);
     }
+
+    @GetMapping("/modulus")
+    public String modulus(@RequestParam int a) {
+        return String.valueOf(Math.abs(a));
+    }
+
 }
