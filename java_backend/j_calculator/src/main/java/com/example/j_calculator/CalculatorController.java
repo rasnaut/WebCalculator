@@ -30,4 +30,12 @@ public class CalculatorController {
     public String divisionWithRemainder(@RequestParam int a, @RequestParam int b) {
         return String.valueOf(a % b);
     }
+
+    @GetMapping("/divideByX")
+    public String divideOneByX(@RequestParam int x) {
+        if (x == 0) {
+            return "Error: Division by zero is not allowed.";
+        }
+        return String.valueOf(1.0 / x);
+    }
 }
