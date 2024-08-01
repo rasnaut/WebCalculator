@@ -27,7 +27,7 @@ public class CalculatorController {
     }
  47-backend-root-calculation1
     @GetMapping("/root")
-    public String root(@RequestParam int a) {
+    public String root(@RequestParam double a) {
         if (a < 0) {
             return "Square root of negative numbers is not allowed.";
         }
