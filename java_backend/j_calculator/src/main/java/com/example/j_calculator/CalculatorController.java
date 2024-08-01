@@ -26,8 +26,7 @@ public class CalculatorController {
         return String.valueOf(a - b);
     }
     @GetMapping("/root")
-    public String root(@RequestParam double a) {
-        // Adding error handling for negative numbers
+    public String root(@RequestParam int a) {
         if (a < 0) {
             return "Square root of negative numbers is not allowed.";
         }
