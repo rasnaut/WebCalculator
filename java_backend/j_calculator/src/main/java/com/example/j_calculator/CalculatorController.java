@@ -26,8 +26,15 @@ public class CalculatorController {
         return String.valueOf(a - b);
     }
 
+
     @GetMapping("/cube")
     public String cube (@RequestParam int a) { return String.valueOf(a * a * a);
+    }
+
+
+    @GetMapping("/division")
+    public String divisionWithRemainder(@RequestParam int a, @RequestParam int b) {
+        return String.valueOf(a % b);
     }
 
 }
