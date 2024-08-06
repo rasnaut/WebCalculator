@@ -36,6 +36,6 @@ public class CalculatorController {
         if (x == 0) {
             return "Error: Division by zero is not allowed.";
         }
-        return String.valueOf(1.0 / x);
+        return String.valueOf(1.0 / x) ;
     }
 }
