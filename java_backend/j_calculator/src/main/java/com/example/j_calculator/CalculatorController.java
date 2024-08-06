@@ -26,9 +26,14 @@ public class CalculatorController {
         return String.valueOf(a - b);
     }
 
+
     @GetMapping("/modulus")
     public String modulus(@RequestParam int a) {
         return String.valueOf(Math.abs(a));
+
+
+    @GetMapping("/cube")
+    public String cube (@RequestParam int a) { return String.valueOf(a * a * a);
     }
 
 
