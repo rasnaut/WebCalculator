@@ -32,7 +32,7 @@ public class CalculatorController {
     }
 
     @GetMapping("/divideByX")
-    public String divideOneByX(@RequestParam int x) {
+    public String divideOneByX(@RequestParam int x)  {
         if (x == 0) {
             return "Error: Division by zero is not allowed.";
         }
