@@ -31,4 +31,10 @@ public class CalculatorController {
         return String.valueOf(Math.abs(a));
     }
 
+
+    @GetMapping("/division")
+    public String divisionWithRemainder(@RequestParam int a, @RequestParam int b) {
+        return String.valueOf(a % b);
+    }
+
 }
