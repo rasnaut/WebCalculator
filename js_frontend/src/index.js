@@ -41,6 +41,15 @@ function calculate() {
                 return result;
              });
     }
+
+    if (currentOperation === 'sinusX') {
+        fetch(`http://localhost:8080/api/calculator/sin?a=${firstOperand}`)
+            .then(response => response.text())
+            .then(result => { 
+                display.value = result;
+                return result;
+             });
+    }
     if (currentOperation === 'tang') {
         fetch(`http://localhost:8080/api/calculator/tang?a=${firstOperand}`)
             .then(response => response.text())
