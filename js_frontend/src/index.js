@@ -23,7 +23,7 @@ function calculate() {
             .then(result => { 
                 display.value = result;
                 return result;
-             });
+            });
     }
     if (currentOperation === '*') {
         fetch(`http://localhost:8080/api/calculator/multiply?a=${firstOperand}&b=${secondOperand}`)
@@ -31,7 +31,7 @@ function calculate() {
             .then(result => { 
                 display.value = result;
                 return result;
-             });
+            });
     }
     if (currentOperation === '/') {
         fetch(`http://localhost:8080/api/calculator/devide?a=${firstOperand}&b=${secondOperand}`)
@@ -39,7 +39,7 @@ function calculate() {
             .then(result => { 
                 display.value = result;
                 return result;
-             });
+            });
     }
     if (currentOperation === 'tang') {
         fetch(`http://localhost:8080/api/calculator/tang?a=${firstOperand}`)
@@ -47,7 +47,15 @@ function calculate() {
             .then(result => { 
                 display.value = result;
                 return result;
-             });
+            });
+    }
+    if (currentOperation === '^') {
+        fetch(`http://localhost:8080/api/calculator/power?a=${firstOperand}&b=${secondOperand}`)
+            .then(response => response.text())
+            .then(result => { 
+                display.value = result;
+                return result;
+            });
     }
     return Promise.resolve();
 }
