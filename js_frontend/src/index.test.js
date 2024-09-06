@@ -38,6 +38,7 @@ test('calculate performs addition correctly', () => {
     display.value = '5';
     setOperation('+');
     display.value = '3';
+});
 
 test('calculate performs tangens correctly', () => {
     document.body.innerHTML = '<input type="text" id="display" />';
