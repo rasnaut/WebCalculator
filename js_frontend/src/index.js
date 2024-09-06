@@ -51,5 +51,14 @@ function calculate() {
     }
     return Promise.resolve();
 }
+function reciprocal() {
+    const display = document.getElementById('display');
+    const currentValue = parseFloat(display.value);
+    if (currentValue !== 0) {
+        display.value = 1 / currentValue;
+    } else {
+        display.value = "Error"; // Fehler bei Division durch 0
+    }
+}
 
 module.exports = { appendNumber, setOperation, calculate };
