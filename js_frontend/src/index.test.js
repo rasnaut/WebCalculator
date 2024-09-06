@@ -38,8 +38,16 @@ test('calculate performs addition correctly', () => {
     display.value = '5';
     setOperation('+');
     display.value = '3';
+});
+
+test('calculate performs tangens correctly', () => {
+    document.body.innerHTML = '<input type="text" id="display" />';
+    const display = document.getElementById('display');
+    display.value = '180';
+    setOperation('tang');
+   
     
-    fetchMock.mockResponseOnce(JSON.stringify('8'));
+    fetchMock.mockResponseOnce(JSON.stringify('0'));
     
     calculate().then(() => {
          expect(display.value).toBe('8');
